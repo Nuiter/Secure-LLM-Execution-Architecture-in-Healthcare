@@ -1,0 +1,82 @@
+# -----------------------------------------------------------------------------
+# Docker Compose Blueprint for: n8n-API-unleashed
+# -----------------------------------------------------------------------------
+#
+# Author: [Angel Ignacio Pérez Santiago / Nuiter]
+#
+# Version: 1.0.0
+#
+# Description:
+#   The foundational proof-of-concept stack. Deploys n8n alongside a local,
+#   CPU-based AI server using the official Llama.cpp implementation.
+#   This version is optimized for accessibility and ease of setup.
+#
+# -----------------------------------------------------------------------------
+
+services:
+  # ----------------------------------------
+  # SERVICE 1: n8n - The Automation Engine
+  # ----------------------------------------
+  n8n:
+    # Image: n8nio/n8n
+    # Reason: This is the image that we have empirically verified works,
+    # is accessible, and is actively updated. It's our battle-tested choice.
+    image: n8nio/n8n
+    container_name: n8n-unleashed
+    restart: unless-stopped
+    ports:
+      - "5678:5678"
+    volumes:
+      - ./n8n-data:/home/node/.n8n
+    environment:
+      - GENERIC_TIMEZONE=Europe/Madrid
+
+  # ----------------------------------------
+  # SERVICE 2: AI Server (CPU Default)
+  # ----------------------------------------
+  ia-server-cpu:
+    # Image: ghcr.io/ggml-org/llama.cpp:server
+    # Reason: This is the current, official, and verified image for the
+    # Llama.cpp server, found after direct investigation. The true source.
+    image: ghcr.io/ggml-org/llama.cpp:server
+    container_name: ia-server-unleashed-cpu
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./model-cache:/models
+    command: 
+      # Model: phi-3-mini-4k-instruct.Q4_K_M.gguf
+      # Reason: Chosen as the starting model for this foundational project.
+      # It's modern, lightweight, and perfect for a proof-of-concept.
+      -m /models/phi-3-mini-4k-instruct.Q4_K_M.gguf -c 4096 --host 0.0.0.0 --port 8080
+
+# ----------------------------------------
+# [OPTIONAL] SERVICE 3: AI Server (GPU)
+# ----------------------------------------
+# To use this, comment out the 'ia-server-cpu' service above and uncomment this one.
+# Requires NVIDIA GPU, drivers, and the NVIDIA Container Toolkit.
+# ----------------------------------------
+# ia-server-gpu:
+#   image: ghcr.io/huggingface/text-generation-inference:latest
+#   container_name: ia-server-unleashed-gpu
+#   restart: unless-stopped
+#   ports:
+#     - "8080:80"
+#   volumes:
+#     - ./model-cache:/data
+#   command: 
+#     # --model-id: Specifies the model repository on Hugging Face Hub.
+#     # We recommend a powerful model like Mixtral for a real GPU upgrade.
+#     --model-id mistralai/Mixtral-8x7B-Instruct-v0.1
+#   deploy:
+#     resources:
+#       reservations:
+#         devices:
+#           - driver: nvidia
+#             count: 1
+#             capabilities: [gpu]
+
+networks:
+  default:
+    name: unleashed-network

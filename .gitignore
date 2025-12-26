@@ -1,0 +1,14 @@
+# Ignore n8n data
+n8n-data/
+
+# Ignore downloaded Hugging Face models
+model-cache/
+
+# Ignore environment files (if used in the future)
+.env
+
+# Ignore some files for testing
+test/
+
+# Ignore some project files
+Project-Files/
