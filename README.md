@@ -117,4 +117,26 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## ✍️ How to Cite
 
-If you find this project useful in your research or work, please consider citing it. You can use the "Cite this repository" widget on the right sidebar of the GitHub repository page.
+If you find this project useful for your research or work, please consider citing it. 
+While a `CITATION.cff` file is provided for automated tools, we recommend using the following formats for accuracy.
+
+### APA
+
+```text
+Pérez-Santiago, Á. I. (Nuiter). (2025). n8n-API-unleashed (Version 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.18065101
+```
+
+### BibTeX
+
+```bibtex
+@software{Perez-Santiago_2025_unleashed,
+  author       = {Pérez-Santiago, Ángel Ignacio (Nuiter)},
+  title        = {{n8n-API-unleashed}},
+  month        = dec,
+  year         = 2025,
+  publisher    = {Zenodo},
+  version      = {1.0.0},
+  doi          = {10.5281/zenodo.18065101},
+  url          = {https://doi.org/10.5281/zenodo.18065101}
+}
+```

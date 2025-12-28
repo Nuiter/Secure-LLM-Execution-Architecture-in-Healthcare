@@ -1,15 +1,28 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
-authors:
-  - family-names: "Pérez Santiago"
-    given-names: "Ángel Ignacio"
-    alia: "Nuiter"
 title: "n8n-API-unleashed"
-type: software-container
+type: software
+authors:
+  - family-names: "Pérez-Santiago"
+    given-names: "Ángel Ignacio"
+    alias: "Nuiter"
+    email: "nuiter@gmail.com"
+    orcid: "https://orcid.org/0000-0001-5694-2126"
+    website: "https://www.linkedin.com/in/angel-perez-santiago"
+    affiliation: "Independent Researcher"
 version: 1.0.0
 date-released: 2025-12-26
-repository-code: "https://github.com/Nuiter/n8n-API-unleashed"
 license: MIT
+repository-code: "https://github.com/Nuiter/n8n-API-unleashed"
+keywords:
+  - n8n
+  - api
+  - automation
+  - portfolio
+  - local-ai
+  - llama-cpp
 identifiers:
   - type: doi
     value: 10.5281/zenodo.18065101
+    description: "Zenodo version"
+
