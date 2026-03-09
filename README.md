@@ -1,6 +1,6 @@
 # 🚀 Secure-LLM-Execution-Architecture-in-Healthcare 🚀
 
-[![DOI](https://zenodo.org/badge/1116883382.svg)](https://doi.org/10.5281/zenodo.18065101) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub Stars](https://img.shields.io/github/stars/Nuiter/n8n-API-unleashed?style=social)](https://github.com/Nuiter/n8n-API-unleashed/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Nuiter/n8n-API-unleashed?style=social)](https://github.com/Nuiter/n8n-API-unleashed/network/members) [![Project Status: Active](https://img.shields.io/badge/status-active-success.svg)](https://github.com/Nuiter/n8n-API-unleashed) [![Built with Docker](https://img.shields.io/badge/Built%20with-Docker-blue?logo=docker)](https://www.docker.com/)
+[![DOI](https://zenodo.org/badge/1116883382.svg)](https://doi.org/10.5281/zenodo.18065101) [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) [![GitHub Stars](https://img.shields.io/github/stars/Nuiter/Secure-LLM-Execution-Architecture-in-Healthcare?style=social)](https://github.com/Nuiter/Secure-LLM-Execution-Architecture-in-Healthcare/stargazers) [![GitHub Forks](https://img.shields.io/github/forks/Nuiter/Secure-LLM-Execution-Architecture-in-Healthcare?style=social)](https://github.com/Nuiter/Secure-LLM-Execution-Architecture-in-Healthcare/network/members) [![Project Status: Active](https://img.shields.io/badge/status-active-success.svg)](https://github.com/Nuiter/Secure-LLM-Execution-Architecture-in-Healthcare) [![Built with Docker](https://img.shields.io/badge/Built%20with-Docker-blue?logo=docker)](https://www.docker.com/)
 
 A Docker Compose stack to unleash the true potential of n8n by freeing it from the dependency on paid APIs.
 
@@ -123,7 +123,7 @@ While a `CITATION.cff` file is provided for automated tools, we recommend using 
 ### APA
 
 ```text
-Pérez-Santiago, Á. I. (Nuiter). (2025). n8n-API-unleashed (Version 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.18065101
+Pérez-Santiago, Á. I. (Nuiter). (2025). Secure-LLM-Execution-Architecture-in-Healthcare (Version 1.0.0) [Software]. Zenodo. https://doi.org/10.5281/zenodo.18065101
 ```
 
 ### BibTeX
@@ -131,7 +131,7 @@ Pérez-Santiago, Á. I. (Nuiter). (2025). n8n-API-unleashed (Version 1.0.0) [Sof
 ```bibtex
 @software{Perez-Santiago_2025_unleashed,
   author       = {Pérez-Santiago, Ángel Ignacio (Nuiter)},
-  title        = {{n8n-API-unleashed}},
+  title        = {{Secure-LLM-Execution-Architecture-in-Healthcare}},
   month        = dec,
   year         = 2025,
   publisher    = {Zenodo},
